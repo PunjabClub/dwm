@@ -28,10 +28,10 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { dwm_selected_foreground_color, dwm_selected_background_color,  dwm_selected_border_color  },
 };
 
-static const char dmenu_general_background_color[]   = "#191724"; /* base */
-static const char dmenu_general_foreground_color[]   = "#908caa"; /* subtle */
-static const char dmenu_selected_foreground_color[]  = "#e0def4"; /* text */
-static const char dmenu_selected_background_color[]  = "#f6c177"; /* gold */
+static const char dmenu_general_background_color[]   = "#1f1d2e"; /* surface */
+static const char dmenu_general_foreground_color[]   = "#e0def4"; /* text */
+static const char dmenu_selected_foreground_color[]  = "#f6c177"; /* gold */
+static const char dmenu_selected_background_color[]  = "#191724"; /* base */
 
 /* tagging */
 static const char *tags[] = { "zsh", "web", "com", "sys", "5", "6", "7", "8", "9" };
