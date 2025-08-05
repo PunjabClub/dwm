@@ -10,17 +10,18 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=20" };
 static const char dmenufont[]       = "monospace:size=20";
 
-// https://rosepinetheme.com/palette/
+// > https://rosepinetheme.com/palette/
 // - base: Primary background
 // - surface: Secondary background
 // - subtle: Medium Contrast foreground
 // - text: High Contrast foreground
-// - gold: (For now, it's uniqueness provider)
-static const char dwm_general_background_color[]   = "#191724"; /* base */
-static const char dwm_general_border_color[]       = "#1f1d2e"; /* surface */
+// - highlight high: High contrast highlight
+// - gold: (For now, it's uniqueness provider, active window)
+static const char dwm_general_background_color[]   = "#1f1d2e"; /* surface */
+static const char dwm_general_border_color[]       = "#524f67"; /* highlight */
 static const char dwm_general_foreground_color[]   = "#908caa"; /* subtle */
 static const char dwm_selected_foreground_color[]  = "#e0def4"; /* text */
-static const char dwm_selected_background_color[]  = "#f6c177"; /* gold */
+static const char dwm_selected_background_color[]  = "#191724"; /* base */
 static const char dwm_selected_border_color[]      = "#f6c177"; /* gold */
 static const char *colors[][3]      = {
 	[SchemeNorm] = { dwm_general_foreground_color,  dwm_general_background_color,   dwm_general_border_color   },
