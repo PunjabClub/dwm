@@ -16,16 +16,21 @@ static const char dmenufont[]       = "monospace:size=20";
 // - subtle: Medium Contrast foreground
 // - text: High Contrast foreground
 // - gold: (For now, it's uniqueness provider)
-static const char col_gray1[]       = "#191724"; /* base */
-static const char col_gray2[]       = "#1f1d2e"; /* surface */
-static const char col_gray3[]       = "#908caa"; /* subtle */
-static const char col_gray4[]       = "#e0def4"; /* text */
-static const char col_cyan[]        = "#f6c177"; /* gold */
+static const char dwm_general_background_color[]   = "#191724"; /* base */
+static const char dwm_general_border_color[]       = "#1f1d2e"; /* surface */
+static const char dwm_general_foreground_color[]   = "#908caa"; /* subtle */
+static const char dwm_selected_foreground_color[]  = "#e0def4"; /* text */
+static const char dwm_selected_background_color[]  = "#f6c177"; /* gold */
+static const char dwm_selected_border_color[]      = "#f6c177"; /* gold */
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { "#1f1d2e", col_cyan,  col_cyan  },
+	[SchemeNorm] = { dwm_general_foreground_color,  dwm_general_background_color,   dwm_general_border_color   },
+	[SchemeSel]  = { dwm_selected_foreground_color, dwm_selected_background_color,  dwm_selected_border_color  },
 };
+
+static const char dmenu_general_background_color[]   = "#191724"; /* base */
+static const char dmenu_general_foreground_color[]   = "#908caa"; /* subtle */
+static const char dmenu_selected_foreground_color[]  = "#e0def4"; /* text */
+static const char dmenu_selected_background_color[]  = "#f6c177"; /* gold */
 
 /* tagging */
 static const char *tags[] = { "zsh", "web", "com", "sys", "5", "6", "7", "8", "9" };
@@ -66,7 +71,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", dmenu_general_background_color, "-nf", dmenu_general_foreground_color, "-sb", dmenu_selected_background_color, "-sf", dmenu_selected_foreground_color, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
